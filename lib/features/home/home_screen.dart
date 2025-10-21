@@ -22,7 +22,7 @@ class _HomeScreenState extends State<HomeScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Colors.white,
-      body: SafeArea(child: _screens[_currentIndex]), // Agregado SafeArea
+      body: SafeArea(child: _screens[_currentIndex]), 
       bottomNavigationBar: BottomNavigationBar(
         currentIndex: _currentIndex,
         onTap: (index) => setState(() => _currentIndex = index),
@@ -56,13 +56,13 @@ class _HomeScreenState extends State<HomeScreen> {
   }
 }
 
-// Pestaña de Seguimiento de Ánimo
+
 class _MoodTrackingTab extends StatelessWidget {
   const _MoodTrackingTab();
 
   @override
   Widget build(BuildContext context) {
-    // Generar días dinámicamente (próximos 7 días)
+   
     final now = DateTime.now();
     final days = List.generate(7, (index) {
       final date = now.add(Duration(days: index));
@@ -76,20 +76,19 @@ class _MoodTrackingTab extends StatelessWidget {
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           const SizedBox(height: 40),
-          
-          // Header con hora
+        
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
               const Text(
-                'Tampía', // Asumí que es correcto; si no, corrígelo
+                'Tampía', 
                 style: TextStyle(
                   fontSize: 24,
                   fontWeight: FontWeight.bold,
                 ),
               ),
               Text(
-                '9:41', // Hardcodeado; usa DateTime.now() si quieres dinámico
+                '9:41',
                 style: TextStyle(
                   color: Colors.grey[600],
                 ),
@@ -99,10 +98,10 @@ class _MoodTrackingTab extends StatelessWidget {
           
           const SizedBox(height: 24),
           
-          // Días de la semana (dinámicos)
+         
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceAround,
-            children: days.take(3).map((day) => Container( // Muestra los primeros 3 días
+            children: days.take(3).map((day) => Container( 
                       padding: const EdgeInsets.symmetric(
                         horizontal: 16,
                         vertical: 8,
@@ -123,8 +122,7 @@ class _MoodTrackingTab extends StatelessWidget {
           ),
           
           const SizedBox(height: 32),
-          
-          // Psicólogos disponibles (corregido)
+        
           const Text(
             'Psicólogos disponibles',
             style: TextStyle(
@@ -134,8 +132,7 @@ class _MoodTrackingTab extends StatelessWidget {
           ),
           
           const SizedBox(height: 16),
-          
-          // Lista de psicólogos
+
           Column(
             children: [
               _PsychologistCard(
@@ -196,7 +193,7 @@ class _PsychologistCard extends StatelessWidget {
                 ),
                 const SizedBox(height: 4),
                 Text(
-                  'Horario: $schedule', // Corregido para combinar
+                  'Horario: $schedule', 
                   style: TextStyle(
                     color: Colors.grey[600],
                   ),
@@ -215,7 +212,6 @@ class _PsychologistCard extends StatelessWidget {
   }
 }
 
-// Otras pestañas (placeholders)
 class _BookingTab extends StatelessWidget {
   const _BookingTab();
 

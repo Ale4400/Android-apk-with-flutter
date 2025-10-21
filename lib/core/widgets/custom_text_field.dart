@@ -37,7 +37,7 @@ class CustomTextField extends StatelessWidget {
         if (labelText != null) ...[
           Text(
             labelText!,
-            style: theme.inputDecorationTheme.labelStyle ?? const TextStyle( // Usa el estilo del tema
+            style: theme.inputDecorationTheme.labelStyle ?? const TextStyle(
               fontWeight: FontWeight.w500,
               fontSize: 14,
             ),

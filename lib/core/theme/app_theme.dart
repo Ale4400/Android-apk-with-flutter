@@ -24,7 +24,7 @@ class AppTheme {
         secondary: secondaryColor,
         background: backgroundColor,
         surface: surfaceColor,
-        onPrimary: Colors.white, // Texto sobre primary
+        onPrimary: Colors.white, 
         onSecondary: Colors.white,
         onBackground: textPrimary,
         onSurface: textPrimary,
@@ -59,7 +59,7 @@ class AppTheme {
           fontSize: 14,
           color: textSecondary,
         ),
-        bodySmall: TextStyle( // Agregado
+        bodySmall: TextStyle(
           fontSize: 12,
           color: textSecondary,
         ),
@@ -74,10 +74,10 @@ class AppTheme {
         focusedBorder: const UnderlineInputBorder(
           borderSide: BorderSide(color: primaryColor),
         ),
-        errorBorder: UnderlineInputBorder( // Agregado
+        errorBorder: UnderlineInputBorder(
           borderSide: BorderSide(color: Colors.red[400]!),
         ),
-        focusedErrorBorder: UnderlineInputBorder( // Agregado
+        focusedErrorBorder: UnderlineInputBorder(
           borderSide: BorderSide(color: Colors.red[400]!),
         ),
         labelStyle: const TextStyle(
@@ -90,7 +90,7 @@ class AppTheme {
     );
   }
 
-  // Tema oscuro (agregado)
+ 
   static ThemeData get darkTheme {
     return ThemeData(
       primaryColor: primaryColor,
@@ -165,7 +165,6 @@ class AppTheme {
     );
   }
 
-  // Método para obtener tema basado en modo (opcional)
   static ThemeData getTheme(Brightness brightness) {
     return brightness == Brightness.light ? lightTheme : darkTheme;
   }

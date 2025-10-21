@@ -13,7 +13,7 @@ final GoRouter _router = GoRouter(
   routes: [
     GoRoute(
       path: '/',
-      redirect: (context, state) => '/login', // Puedes cambiar esto para autenticación real
+      redirect: (context, state) => '/login', 
     ),
     GoRoute(
       path: '/login',
@@ -37,9 +37,9 @@ class MoodyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp.router(
       title: 'Moody',
-      theme: AppTheme.lightTheme, // Tema claro
-      darkTheme: AppTheme.darkTheme, // Tema oscuro (agregado)
-      themeMode: ThemeMode.system, // Respeta la configuración del dispositivo
+      theme: AppTheme.lightTheme,
+      darkTheme: AppTheme.darkTheme, 
+      themeMode: ThemeMode.system, 
       routerConfig: _router,
       debugShowCheckedModeBanner: false,
     
